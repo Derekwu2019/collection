@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="/js/jquery-3.4.1.min.js">
+  <style>
+    /* * {
+      border: 1px solid red;
+    } */
+
+    body {
+      background: #000;
+      font-family: Pristina, '微軟正黑體';
+      font-weight: 100;
+      font-size: 1rem;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: #FFF;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 100;
+      letter-spacing: 5px;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 100;
+      letter-spacing: 5px;
+    }
+
+    h3 {
+      font-size: 3rem;
+      font-weight: 100;
+      letter-spacing: 5px;
+
+    }
+
+    h4 {
+      font-size: 2rem;
+      font-weight: 100;
+      letter-spacing: 5px;
+
+    }
+
+    ul {
+      text-decoration: none;
+      list-style-type: none;
+    }
+
+    /* header--------------------- */
+
+    .container {
+      /* max-width: 1920px; */
+      margin: 0 auto;
+      padding: 3% 3% 0 3%;
+      max-width: 100%;
+      height: 100vh;
+      background: url(images/1/bg1.jpg) center top no-repeat;
+      background-size: cover;
+    }
+
+    .container .navTop {
+      /* max-width: 1920px; */
+      width: 100%;
+      position: relative;
+    }
+
+    .container .nav {
+      width: 30%;
+    }
+
+    .container .logo img {
+      height: 70px;
+    }
+
+    .container .textBar {
+      width: 60%;
+    }
+
+    .container .textBar ul {
+      color: #fff;
+      text-align: center;
+    }
+
+    .container .textBar ul:hover {
+      color: #C69C6D;
+      text-decoration: none;
+    }
+
+    .container .textBar ul::before {
+      content: "";
+      height: 70%;
+      color: #C69C6D;
+      border: 2px solid #fff;
+      position: absolute;
+      top: 5px;
+      left: -12px;
+    }
+
+    .container .menu {
+      /* width: 10%; */
+      margin: 0 3%;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      letter-spacing: 5px;
+      transition: .5s;
+    }
+
+    .container .menu a:hover {
+      color: #C69C6D;
+    }
+
+    .container .menu li {
+      font-size: 1.7rem;
+    }
+
+    .container .menu .EN {
+      font-size: 1.3rem;
+
+    }
+
+    .container .textBar li {
+      list-style: none;
+    }
+
+    .container .textBar .icon {
+      color: #fff;
+      justify-content: center;
+      text-align: center;
+      margin: 0 0 0 40px;
+    }
+
+    .container .icon::before {
+      content: '';
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .container .menuBT {
+      position: absolute;
+      top: 0;
+      right: 2%;
+    }
+
+    /* .container .menuBT::before {
+      /* content: '';
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }  */
+    /* ---------------------------------- */
+    .container .fa-1x {
+      font-size: 1.5rem;
+    }
+
+    .container .navbar-toggler.toggler-example {
+      cursor: pointer;
+    }
+    .container .white{
+      padding: 0;
+    }
+   
+    .container .btn{
+      background-color: rgb(255, 255, 255);
+      color: white;
+      border-color: white;
+      border: 3px solid white;
+    }
+
+    /* ------------------------------------ */
+
+
+    .show-in-mobile {
+      display: none;
+    }
+
+    @media screen and (max-width:768px) {
+      .show-in-mobile {
+        display: block;
+      }
+
+      .show-in-desk {
+        display: none !important;
+      }
+    }
+
+    .container .PubLogo {
+      width: 600px;
+      position: absolute;
+      top: 40%;
+      left: 35%;
+    }
+
+    .container .down {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+    }
+
+    @media screen and (max-width:768px) {
+      .container .PubLogo {
+        width: 400px;
+        position: absolute;
+        top: 30%;
+        left: 24%;
+      }
+    }
+
+    /* section-------------- */
+    .page2 {
+      max-width: 100%;
+    }
+
+    .page2 .story {
+      max-width: 1920px;
+    }
+
+    .page2 .menuStory {
+      padding: 3% 0;
+      margin: 5% 0 0 0;
+      align-items: center;
+      text-align: center;
+    }
+
+    .page2 .story h1 {
+      line-height: 4;
+      text-align: center;
+      margin: 0 0 -3% 0;
+    }
+
+    .page2 .story p {
+      color: #B3B3B3;
+      font-size: 2rem;
+      line-height: 2;
+      text-align: center;
+      letter-spacing: 5px;
+    }
+
+    @media screen and (max-width:768px) {
+      .page2 .menuStory {
+        padding: 3% 0;
+        margin: 8% 0 0 0;
+        align-items: center;
+        text-align: center;
+      }
+
+      .page2 .story h1 {
+        font-size: 3.5rem;
+        line-height: 3;
+        text-align: center;
+      }
+
+      .page2 .story p {
+        color: #B3B3B3;
+        font-size: 2rem;
+        line-height: 2;
+        text-align: center;
+        letter-spacing: 5px;
+        width: 80%;
+        margin: 0 auto 8% auto;
+      }
+    }
+
+    .page2 .story h3,
+    h4 {
+      color: #C69C6D;
+    }
+
+    .page2 .carousel {
+      margin: 3% 0 0 0;
+    }
+
+    .page2 .carousel-indicators li {
+      margin: 0 1%;
+      height: 10px;
+
+    }
+
+    .page2 .carousel-item {
+      width: 100%;
+      height: 65vh;
+    }
+
+    .page2 .carousel-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* page3---------- */
+    .page3 {
+      margin: 5% 0;
+      max-width: 1920px;
+    }
+
+    .page3 .story {
+      max-width: 100%;
+      height: 130vh;
+      background: url(images/2/IMG_6881.jpg)center top no-repeat;
+      background-size: cover;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page3 .story h1 {
+      line-height: 4;
+      text-align: center;
+      margin: 0 0 -3% 0;
+    }
+
+    .page3 .story p {
+      color: #B3B3B3;
+      font-size: 2rem;
+      line-height: 2;
+      text-align: center;
+      letter-spacing: 5px;
+    }
+
+    @media screen and (max-width:768px) {
+      .page3 .story {
+        max-width: 100%;
+        height: 170vh;
+        background: url(images/2/IMG_6881.jpg)center top no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      .page3 .story h1 {
+        font-size: 3.5rem;
+        line-height: 3;
+        text-align: center;
+      }
+
+      .page3 .story p {
+        color: #B3B3B3;
+        font-size: 2rem;
+        line-height: 2;
+        text-align: center;
+        letter-spacing: 5px;
+        width: 80%;
+        margin: 0 auto;
+
+      }
+    }
+
+    .page3 .picBox {
+      margin: 3% 0;
+      width: 72%;
+      text-align: center;
+      background: rgba(78, 78, 78, 0.5);
+    }
+
+    .page3 .boxSmall {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .page3 figure {
+      padding: 0;
+    }
+
+    .page3 .pic {
+      width: 31%;
+      margin: 1% 1%;
+      overflow: hidden;
+    }
+
+    .page3 img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width:768px) {
+      .page3 .picBox {
+        margin: 8% 0;
+        width: 100%;
+        text-align: center;
+        background: rgba(78, 78, 78, 0.5);
+      }
+
+      .page3 .pic {
+        width: 45%;
+        margin: 1% 1%;
+        overflow: hidden;
+      }
+    }
+
+    .page4 {
+      margin: 5% 0;
+      max-width: 1920px;
+    }
+
+    .page4 .menu {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page4 .menuMenu {
+      color: #C69C6D;
+      padding: 3% 0;
+      align-items: center;
+      text-align: center;
+    }
+
+    .page4 .menu h1 {
+      line-height: 4;
+      text-align: center;
+      margin: 0 0 -3% 0;
+    }
+
+    .page4 .menu p {
+      color: #B3B3B3;
+      font-size: 2rem;
+      line-height: 2;
+      text-align: center;
+      letter-spacing: 5px;
+    }
+
+
+
+
+    .page4 .menuBox {
+      margin: 3% 0;
+      width: 90%;
+    }
+
+    .page4 .menuBox .pic1 {
+      width: 60%;
+      overflow: hidden;
+    }
+
+    .page4 .menuBox .pic2 {
+      width: 40%;
+      margin-left: 1%;
+      overflow: hidden;
+      background: url(images/4/red-1343605.jpg);
+      background-size: cover;
+    }
+
+    .page4 .pic1 img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .page4 .pic2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page4 .pic2 h3,
+    h4 {
+      color: #C69C6D;
+      align-items: center;
+      text-align: center;
+    }
+
+    .page4 ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .page4 .menuBtn {
+      width: 300px;
+      height: 150px;
+      margin: 50px 0;
+      padding: 10% 0;
+      border: 1px solid #C69C6D;
+    }
+
+    @media screen and (max-width:768px) {
+      .page4 .menu h1 {
+        font-size: 3.5rem;
+        line-height: 1.5;
+        text-align: center;
+        width: 80%;
+      }
+
+
+      .page4 .menu p {
+        color: #B3B3B3;
+        font-size: 2rem;
+        line-height: 2;
+        text-align: center;
+        letter-spacing: 5px;
+        width: 80%;
+        margin: 0 auto 8% auto;
+      }
+
+      .page4 .menuBox {
+        margin: 3% 0;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+
+      }
+
+      .page4 .menuBox .pic1 {
+        width: 80%;
+        overflow: hidden;
+
+      }
+
+      .page4 .menuBox .pic2 {
+        width: 80%;
+        margin-left: 1%;
+        overflow: hidden;
+        background: url(images/4/red-1343605.jpg);
+        background-size: cover;
+      }
+
+    }
+
+
+    .menuBtn:hover h3 {
+      color: #fff;
+
+    }
+
+    .menuBtn:hover {
+      background: #C69C6D;
+    }
+
+    .menuBtn:hover h4 {
+      color: #fff;
+    }
+
+    .page5 {
+      margin: 5% 0;
+      max-width: 1920px;
+    }
+
+    .page5 .content {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .page5 .contentMenu {
+      padding: 3% 0;
+    }
+
+
+    .page5 .contentMenu h3,
+    h4 {
+      color: #C69C6D;
+    }
+
+    .page5 .contentPosition {
+      /* max-width: 80%; */
+      width: 80%;
+      margin: 5% 0;
+    }
+
+    .page5 .Lbox {
+      width: 50%;
+      margin: 0 3% 0 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page5 figure {
+      width: 80%;
+
+    }
+
+    .page5 img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .page5 .text {
+      width: 100%;
+      margin: 5% 0;
+      text-align: center;
+
+    }
+
+    .page5 p {
+      font-size: 1.4rem;
+      line-height: 1.7;
+    }
+
+    .page5 .google-maps {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .google-maps iframe {
+      top: 50%;
+      left: 50%;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    @media screen and (max-width:768px) {
+      .page5 .contentPosition {
+        /* max-width: 80%; */
+        width: 80%;
+        margin: 5% 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .page5 .Lbox {
+        width: 80%;
+        margin: 0 0 3% 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .page5 .google-maps {
+        width: 100%;
+        overflow: hidden;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="navTop d-flex justify-content-between">
+      <div class="nav">
+        <figure class="logo"><img src="images/SVG/logoS.svg" alt=""></figure>
+      </div>
+      <ul class="textBar d-flex show-in-desk">
+        <a class="menu" href="#1">
+          <ul>
+            <li>首頁</li>
+            <li class="EN">Home</li>
+          </ul>
+        </a>
+
+        <a class="menu" href="#p2">
+          <ul>
+            <li>品牌故事</li>
+            <li class="EN">Story</li>
+          </ul>
+        </a>
+        <a class="menu" href="#p3">
+          <ul>
+            <li>菜單</li>
+            <li class="EN">Menu</li>
+          </ul>
+        </a>
+        <a class="menu" href="#p4">
+          <ul>
+            <li>聯絡我們</li>
+            <li class="EN">Content Us</li>
+          </ul>
+        </a>
+        <a class="menu1" href="">
+          <div class="icon">
+            <i class="fab fa-facebook-f fa-2x"></i>
+          </div>
+        </a>
+        <a class="menu1" href="">
+          <div class="icon">
+            <i class="fab fa-instagram fa-2x"></i>
+          </div>
+        </a>
+      </ul>
+      <div class="show-in-mobile">
+        <!--Navbar-->
+        <nav class="navbar navbar-light navbar-1 white ">
+
+          <!-- Navbar brand -->
+          <a class="navbar-brand text-white" href="#"></a>
+
+          <!-- Collapse button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+            aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span
+              class="navbar-toggler-icon btn"></span></button>
+
+          <!-- Collapsible content -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link text-white" href="#1">首頁Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#p2">品牌故事Story</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link text-white" href="#p3">菜單Menu</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link text-white" href="#p4">聯絡我們Content US</a>
+                </li>
+            </ul>
+            <!-- Links -->
+
+          </div>
+          <!-- Collapsible content -->
+
+        </nav>
+        <!--/.Navbar-->
+      </div>
+
+    </div>
+    <div class="PubLogo">
+      <img src="images/SVG/LogoB.svg" alt="">
+    </div>
+    <i class="down fas fa-chevron-down fa-2x"></i>
+  </div>
+  <section class="page2">
+    <div class="story">
+      <div class="menuStory" id="p2">
+        <h3>品牌故事</h3>
+        <h4>Story</h4>
+      </div>
+      <h1>品味．休閒．生活</h1>
+      <p>Irish Pub酒吧是一家愛爾蘭式的酒吧，<br>
+        有多樣的Cocktail、Beers。<br>
+        如果你沒有飲酒，也可以嚐嚐無酒精的Soft Drink與美味的餐點。</p>
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/2/IMG_3747.jpg" alt="Los Angeles" width="1686" height="794">
+          </div>
+          <div class="carousel-item">
+            <img src="images/2/IMG_6884.JPG" alt="Chicago" width="1686" height="794">
+          </div>
+          <div class="carousel-item">
+            <img src="images/2/IMG_6887.JPG" alt="New York" width="1686" height="794">
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="page3">
+    <div class="story d-flex">
+      <h1>聚會．球賽轉播</h1>
+      <p>在Irish Pub，無論是一個人或者是與朋友一起聚會，<br>都能感受到這裡輕鬆的用餐環境，更棒的是，如果你是運動比賽愛好者<br>這裡也有精彩的球賽轉播，重大賽事也不會錯過。
+      </p>
+      <div class="picBox d-flex">
+        <div class="boxSmall d-flex">
+          <figure class="pic">
+            <img src="images/3/glasses-919071.jpg" alt="">
+          </figure>
+          <figure class="pic">
+            <img src="images/3/soccer-263716_1920.jpg" alt="">
+          </figure>
+          <figure class="pic">
+            <img src="images/3/birthday-cake-380178_1920.jpg" alt="">
+          </figure>
+          <figure class="pic">
+            <img src="images/3/beer-2608535.jpg" alt="">
+          </figure>
+          <figure class="pic">
+            <img src="images/3/cocktail-922974.jpg" alt="">
+          </figure>
+          <figure class="pic">
+            <img src="images/3/pizza-1442946.jpg" alt="">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page4">
+    <div class="menu d-flex">
+      <div class="menuMenu" id="p3">
+        <h3>菜單</h3>
+        <h4>Menu</h4>
+      </div>
+      <h1>觸動味蕾與心靈的感動!</h1>
+      <p>香脆的炸魚條，咬起來鮮嫩多汁，配上主廚特製醬料，<br>這時候配上一杯冰涼的生啤酒，簡直是絕配!</p>
+      <div class="menuBox d-flex">
+        <figure class="pic1">
+          <img src="images/4/beer-1732755.jpg" alt="">
+        </figure>
+        <figure class="pic2">
+          <ul>
+            <li class="menuBtn">
+              <a href="">
+                <h3>美食菜單</h3>
+                <h4>Food Menu</h4>
+              </a>
+            </li>
+            <li class="menuBtn">
+              <a href="/home03-1.html">
+                <h3>酒類菜單</h3>
+                <h4>Drink List</h4>
+              </a>
+            </li>
+            <li class="menuBtn">
+              <a href="">
+                <h3>無酒精飲料</h3>
+                <h4>Soft Drinks</h4>
+              </a>
+            </li>
+          </ul>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section class="page5">
+    <div class="content d-flex">
+      <div class="contentMenu" id="p4">
+        <h3>聯絡我們</h3>
+        <h4>Contact us</h4>
+      </div>
+      <div class="contentPosition d-flex">
+        <div class="Lbox d-flex">
+          <figure>
+            <img src="images/SVG/logoB.svg" alt="">
+          </figure>
+          <div class="text">
+            <p>預約電話：<br>02-2507-7709<br>營業時間：<br>6:00PM~4:00AM<br>地址：<br>
+              台北市中山區松江路25巷3號1F
+            </p>
+          </div>
+        </div>
+        <div class="google-maps">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6119431039087!2d121.53153051537893!3d25.047240143913637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a963af49414f%3A0x36ac5da99e30cadc!2sThe+Pub!5e0!3m2!1szh-TW!2stw!4v1559627715847!5m2!1szh-TW!2stw"
+            width="1200" height="540" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
